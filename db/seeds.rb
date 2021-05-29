@@ -5,3 +5,70 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+my_orchestra = Orchestra.create(name: "Cabrera's Philharmonic")
+chicago = Orchestra.create(name: "Chicago Symphony Orchestra")
+
+my_orchestra.instruments.build(
+    name: "Trumpet",
+    family: "Brass",
+    quantity: 4
+)
+
+my_orchestra.instruments.build(
+    name: "Cello",
+    family: "String",
+    quantity: 6
+)
+
+my_orchestra.instruments.build(
+    name: "Viola",
+    family: "String",
+    quantity: 10
+)
+
+my_orchestra.instruments.build(
+    name: "Clarinet",
+    family: "Woodwind",
+    quantity: 2
+)
+
+my_orchestra.instruments.build(
+    name: "Timpani",
+    family: "Percussion",
+    quantity: 2
+)
+
+chicago.instruments.build(
+    name: "Tuba",
+    family: "Brass",
+    quantity: 1
+)
+
+chicago.instruments.build(
+    name: "Violin",
+    family: "String",
+    quantity: 15
+)
+
+chicago.instruments.build(
+    name: "Flute",
+    family: "Woodwind",
+    quantity: 3
+)
+
+chicago.instruments.build(
+    name: "Oboe",
+    family: "Woodwind",
+    quantity: 4
+)
+
+chicago.instruments.build(
+    name: "Timpani",
+    family: "Percussion",
+    quantity: 2
+)
+
+my_orchestra.save
+chicago.save
