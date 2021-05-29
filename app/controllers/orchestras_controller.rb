@@ -5,7 +5,7 @@ class OrchestrasController < ApplicationController
   def index
     @orchestras = Orchestra.all
 
-    render json: @orchestras
+    render json: @orchestras, only: [:id, :name], include: :instruments
   end
 
   # GET /orchestras/1
