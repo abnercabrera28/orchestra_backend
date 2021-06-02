@@ -22,9 +22,15 @@ class OrchestrasController < ApplicationController
     @orchestra = Orchestra.new(orchestra_params)
 
     if @orchestra.save
-      render json: @orchestra, status: :created, location: @orchestra
+      render json: {
+        status: 201,
+        orchestra: @orchestra 
+      }, status: :created, location: @orchestra
     else
-      render json: @orchestra.errors, status: :unprocessable_entity
+      render json: {
+        status: 422,
+        errors: @orchestra.errors.full_messages.join(", ")
+      }, status: :unprocessable_entity
     end
   end
 
