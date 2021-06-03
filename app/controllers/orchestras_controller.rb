@@ -49,6 +49,7 @@ class OrchestrasController < ApplicationController
       render json: {message: "Successfully deleted", orchestra: @orchestra}
     else
       render json: {message: "Failed to delete"}
+    end
   end
 
   private
