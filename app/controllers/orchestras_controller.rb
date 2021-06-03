@@ -43,7 +43,7 @@ class OrchestrasController < ApplicationController
     }
     else
       render json: {
-        status: 400
+        status: 400,
         errors: @orchestra.errors.full_messages.join(", ") 
       }, status: :unprocessable_entity
     end
