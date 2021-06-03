@@ -45,7 +45,10 @@ class OrchestrasController < ApplicationController
 
   # DELETE /orchestras/1
   def destroy
-    @orchestra.destroy
+    if @orchestra.destroy
+      render json: {message: "Successfully deleted", orchestra: @orchestra}
+    else
+      render json: {message: "Failed to delete"}
   end
 
   private
