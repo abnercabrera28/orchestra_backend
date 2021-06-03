@@ -37,9 +37,15 @@ class OrchestrasController < ApplicationController
   # PATCH/PUT /orchestras/1
   def update
     if @orchestra.update(orchestra_params)
-      render json: @orchestra
+      render json: {
+        status: 204,
+        orchestra: @orchestra
+    }
     else
-      render json: @orchestra.errors, status: :unprocessable_entity
+      render json: {
+        status: 400
+        errors: @orchestra.errors.full_messages.join(", ") 
+      }, status: :unprocessable_entity
     end
   end
 
