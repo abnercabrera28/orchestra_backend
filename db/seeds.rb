@@ -9,6 +9,7 @@
 
 my_orchestra = Orchestra.create(name: "Cabrera's Philharmonic")
 chicago = Orchestra.create(name: "Chicago Symphony Orchestra")
+not_great = Orchestra.create(name: "Not-So-Great Orchestra")
 
 my_orchestra.instruments.build(
     name: "Trumpet",
@@ -70,5 +71,36 @@ chicago.instruments.build(
     quantity: 2
 )
 
+not_great.instruments.build(
+    name: "Trombone",
+    family: "Brass",
+    quantity: 1
+)
+
+not_great.instruments.build(
+    name: "Double Bass",
+    family: "String",
+    quantity: 1
+)
+
+not_great.instruments.build(
+    name: "Piccolo",
+    family: "Woodwind",
+    quantity: 1
+)
+
+not_great.instruments.build(
+    name: "Bassoon",
+    family: "Woodwind",
+    quantity: 1
+)
+
+not_great.instruments.build(
+    name: "Cymbals",
+    family: "Percussion",
+    quantity: 1
+)
+
 my_orchestra.save
 chicago.save
+not_great.save
