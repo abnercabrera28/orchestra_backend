@@ -1,24 +1,19 @@
-# README
+# Orchestras JS Project (Backend)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the API for a Single Page Application where a user can create their own orchestras, as well as editing and deleting them from their database.
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+For a walkthrough of the user experience, click this [here](https://youtu.be/PRSqAcf6WG8).
 
-* System dependencies
+## Development
 
-* Configuration
+After checking out the repo, run bundle to install dependencies. Run db:seed to seed the data given. Then run the rails server (rails s) to access all the data.
 
-* Database creation
+## Contributing
 
-* Database initialization
+Bug reports and pull requests are welcome on GitHub at https://github.com/abnercabrera28/orchestra_frontend and https://github.com/abnercabrera28/orchestra_backend.
 
-* How to run the test suite
+## License
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[MIT](https://github.com/abnercabrera28/orchestra_frontend/blob/main/LICENSE)
